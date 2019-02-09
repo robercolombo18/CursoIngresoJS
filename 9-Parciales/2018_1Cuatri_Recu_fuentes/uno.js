@@ -12,9 +12,9 @@ function mostrar()
     base=parseInt(base);
     altura=parseInt(altura);
 
-    superficie=(base*altura) / 2;
-    perimetro=
+    superficie=(base*altura)/2;
+    perimetro=(base+altura);
 
-    alert("La superficie es " + superficie);
+    alert("La superficie es " + superficie + "y el perimetro es " + perimetro);
 
 }
