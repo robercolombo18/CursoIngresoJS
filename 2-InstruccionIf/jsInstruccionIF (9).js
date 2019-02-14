@@ -1,6 +1,14 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
+	var boton
+	var numerorandom
+
+	boton=document.getElementsByClassName("FormIngreso").value;
+
+	numerorandom=parseInt(numerorandom);
+
 	
 
-}//FIN DE LA FUNCIÓN
+	
+
+}
