@@ -1,20 +1,24 @@
 
 function mostrar()
 {
-    var base;
-    var altura;
-    var superficie;
-    var perimetro;
+    var mascotauno
+    var mascotados
+    var pesomascotauno
+    var pesomascotados
+    var pesototal
 
-    base=prompt("Ingrese base");
-    altura=prompt("Ingrese altura");
+    mascotauno=prompt("Ingrese el nombre de la primer mascota.");
+    mascotados=prompt("Ingrese el nombre de la segunda mascota.");
 
-    base=parseInt(base);
-    altura=parseInt(altura);
+    pesomascotauno=prompt("Ingrese el peso de la primer mascota.");
+    pesomascotados=prompt("Ingrese el peso de la segunda mascota.");
 
-    superficie=(base*altura)/2;
-    perimetro=(base+altura);
+    pesomascotauno=parseInt(pesomascotauno);
+    pesomascotados=parseInt(pesomascotados);
+    pesototal=parseInt(pesototal);
 
-    alert("La superficie es " + superficie + "y el perimetro es " + perimetro);
+    pesototal=pesomascotauno+pesomascotados;
+
+    alert("Tenes dos mascotas " + mascotauno + " y " + mascotados + " , que pesan " + pesomascotauno + " y " + pesomascotados + " , la suma de los kilos es " + pesototal);
 
 }

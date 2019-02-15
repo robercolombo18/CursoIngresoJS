@@ -1,11 +1,14 @@
 function mostrar()
 {
-	var boton
 	var numerorandom
 
-	boton=document.getElementsByClassName("FormIngreso").value;
-
 	numerorandom=parseInt(numerorandom);
+
+	numerorandom=Math.floor(Math.random()*10)+1;
+
+	alert("Numero RANDOM: " + numerorandom);
+
+	
 
 	
 

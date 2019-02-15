@@ -1,11 +1,21 @@
 function mostrar()
 {
-    var nombre
-    var localidad
+    var precio
+    var descuento
+    var preciodescuento
+    var preciofinal
 
-    nombre=document.getElementById("elNombre").value;
-    localidad=document.getElementById("laLocalidad").value;
+    precio=document.getElementById("elNombre").value;
 
-    alert("Usted se llama " + nombre + " y vive en la localidad de " + localidad);
+    precio=parseInt(precio);
+    preciodescuento=parseInt(preciodescuento);
+    preciofinal=parseInt(preciofinal);
+
+    preciodescuento=precio-(precio*10/100);
+    preciofinal=preciodescuento+(preciodescuento*21/100);
+
+
+
+    alert("Tu compra es de " + precio + " , tenes un descuento del 10%, queda en " + preciodescuento + " , mas el iva es " + preciofinal);
   
 }
