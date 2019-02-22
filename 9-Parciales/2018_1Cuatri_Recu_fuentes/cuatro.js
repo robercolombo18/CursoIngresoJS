@@ -1,35 +1,69 @@
 function mostrar()
 {
-    var librouno
-    var librodos
-    var precio15descuento
-    var tarjeta
+    var importeUno;
+    var importeDos;
+    var importeTres;
+    var importeCuatro;
+    var importeTotal;
+    var mayor;
 
-    librouno=prompt("Usted ha comprado dos libros, ingrese el precio del primer libro");
-    librodos=prompt("Ingrese el precio del segundo libro");
-    tarjeta=prompt("Ingrese 1 si usted abonará con tarjeta, de lo contrario ingrese 0");
+    importeUno=prompt("Ingrese importe 1");
+    importeDos=prompt("Ingrese importe 2");
+    importeTres=prompt("Ingrese importe 3");
+    importeCuatro=prompt("Ingrese importe 4");
 
-    librouno=parseInt(librouno);
-    librouno=parseInt(librodos);
-    precio15descuento=parseInt(precio15descuento);
-    tarjeta=parseint(tarjeta);
+    importeUno=parseInt(importeUno);
+    importeDos=parseInt(importeDos);
+    importeTres=parseInt(importeTres);
+    importeCuatro=parseInt(importeCuatro);
 
+    importeTotal= (importeUno+importeDos+importeTres+importeCuatro);
 
-    libros=librouno+librodos;
-    precio15descuento=libros*0.15;
-
-    if(libros>2000){
-        alert("Su compra supera los $2000, se le aplica un descuento adicional del 15%, queda en " + precio15descuento);
+    if(importeUno>importeDos && importeUno>importeTres && importeUno>importeCuatro)
+    {
+        mayor=importeUno;
     }
     else
     {
-        if(tarjeta==1){
-            alert("Usted pagará con tarjeta, se le agrega un 10% de recargo, queda en " + [precio15descuento*0.10]);
+        if(importeDos>importeUno && importeDos>importeTres && importeDos>importeCuatro)
+        {
+            mayor=importeDos;
         }
-        else{
-            alert("Usted abonará en efectivo, el precio final es " + precio15descuento);
+        else
+        {
+            if(importeTres>importeUno && importeTres>importeDos && importeTres>importeTres>importeCuatro)
+            {
+                mayor=importeTres;
+            }
+            else
+            {
+                if(importeCuatro>importeUno && importeCuatro>importeDos && importeCuatro>importeTres)
+                {
+                    mayor=importeCuatro;
+                }
+            }
+        
         }
-
 
     }
+
+    if(importeTotal>100)
+    {
+        importeTotal=importeTotal-(importeTotal*0.10);
+    }
+    else
+    {
+        if(importeTotal>50)
+        {
+            importeTotal=importeTotal-(importeTotal*0.05);
+        }
+        else
+        {
+            importeTotal=importeTotal*1.15;
+        }
+    
+    }
+
+    alert("El mayor es: " + mayor + " y el importe total es: " + importeTotal);
+
 }
