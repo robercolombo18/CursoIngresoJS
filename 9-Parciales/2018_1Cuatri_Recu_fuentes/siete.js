@@ -29,6 +29,15 @@ function mostrar()
         sumaVelocidad=sumaVelocidad+velocidad;
         console.log("Suma velocidad: " + sumaVelocidad);
 
+        while(!(velocidad>0 && velocidad<250))
+        {
+            velocidad=prompt("Incorrecto, ingrese una velocidad valida");
+            velocidad=parseInt(velocidad);
+
+        }
+
+
+
 		if(bandera==0)
 		{
 			velocidadMaxima=velocidad;
@@ -38,14 +47,14 @@ function mostrar()
 		}
         else
         {
-            if(velocidadMaxima<velocidad && velocidad>0 && velocidad<250)
+            if(velocidad>velocidadMaxima)
             {
                 velocidadMaxima=velocidad;
             }
         
 
 
-            if(velocidadMinima>velocidad )
+            if(velocidad<velocidadMinima)
             {
                 velocidadMinima=velocidad;
                 tipoCombustible=combustible;
