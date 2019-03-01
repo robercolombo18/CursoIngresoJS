@@ -6,7 +6,9 @@ function mostrar()
     var promedio;
     var cantidadNotas;
 
-    cont=0
+    cont=0;
+    cantidadNotas=0;
+
 
     while(nota>=0 && nota<=10 && cont<5)
     {
@@ -19,6 +21,6 @@ function mostrar()
 
     promedio=cantidadNotas/5
 
-    alert("El promedio de las notas es: " + promedio + " ")
+    alert("El promedio de las notas es: " + promedio + " ");
 
 }
