@@ -1,57 +1,35 @@
 function mostrar()
 {
-
-	var contador;
-	var positivo;
-	var negativo;
+	var positivos;
+	var negativos;
 	var respuesta;
+	var numero;
 
-	contador=0;
-	positivo=0;
-	negativo=0;
-	respuesta="si";
+	respuesta=true;
+	positivos=0;
+	negativos=1;
 
-	var queresContinuar;
-	queresContinuar="si";
-	while(queresContinuar!="no")
+	while(respuesta==true)
 	{
-		queresContinuar=prompt("Para salir ingrese no");
-	}
+		numero=prompt("Ingrese un numero");
+		numero=parseInt(numero);
 
-	var contadorDeVueltas;
-	contadorDeVueltas=0;
-	while(contadorDeVueltas<5)
-	{
-		contadorDeVueltas++;
-	}
-
-	var contadorAlumnos;
-	var edad;
-	contadorAlumnos=0
-	while(contadorAlumnos<100)
-	{
-		edad=prompt("Ingrese edad");
-		edad=parseInt(edad);
-		if(edad==66)
+		if(numero>0)
 		{
-			break;
+			positivos=positivos+numero;
 		}
-		if(contadorAlumnos==100)
+
+		if(numero<0)
 		{
-			break;
+			negativos=negativos*numero;
 		}
-		contadorAlumnos++;
+
+
+
+		respuesta=confirm("Desea continuar?");
 	}
 
-	if(contadorAlumnos==100)
-	{
+	document.getElementById("suma").value=positivos;
+	document.getElementById("producto").value=negativos;
 
-	}
-
-
-
-
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
-
-}//FIN DE LA FUNCIÓN
+}

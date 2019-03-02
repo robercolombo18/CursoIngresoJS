@@ -1,3 +1,7 @@
+//---------------------MODELO PARCIAL 2---------------------//
+
+
+
 function mostrar()
 {
     var pais;

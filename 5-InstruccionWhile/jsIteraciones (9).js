@@ -1,32 +1,24 @@
 function mostrar()
 {
-
-	var contador;
-	var respuesta;
-	var numeroMaximo;
-	var numeroMinimo;
 	var numeroIngresado;
+	var respuesta;
 	var bandera;
+	var numeroMinimo;
+	var numeroMaximo;
 
-
-	respuesta="si";
-	contador=0;
-	//numeroMaximo=-9999;
-	//numeroMinimo=9999;
+	respuesta=true;
 	bandera=0;
 
-	while(respuesta!='no')
+	while(respuesta==true)
 	{
-
-		numeroIngresado=prompt("Ingrese numero");
+		numeroIngresado=prompt("Ingrese un numero.");
 		numeroIngresado=parseInt(numeroIngresado);
 
 		if(bandera==0)
 		{
-			numeroMaximo=numeroIngresado;
 			numeroMinimo=numeroIngresado;
+			numeroMaximo=numeroIngresado;
 			bandera=1;
-	
 		}
 		else
 		{
@@ -34,7 +26,7 @@ function mostrar()
 			{
 				numeroMaximo=numeroIngresado;
 			}
-	
+			
 			if(numeroMinimo>numeroIngresado)
 			{
 				numeroMinimo=numeroIngresado;
@@ -42,13 +34,14 @@ function mostrar()
 
 		}
 
+		console.log("Maximo: " + numeroMaximo);
+		console.log("Minimo: " + numeroMinimo);
 
-		respuesta=prompt("Ingrese no para salir");
+
+		respuesta=confirm("Deseas continuar?");
 	}
-	console.log("El maximo es: " + numeroMaximo);
-	console.log("El minimo es: " + numeroMinimo);
 
-
-
+	document.getElementById("maximo").value=numeroMaximo;
+	document.getElementById("minimo").value=numeroMinimo;
 
 }

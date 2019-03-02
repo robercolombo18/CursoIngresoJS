@@ -1,3 +1,6 @@
+//---------------------MODELO PARCIAL 1---------------------//
+
+
 function mostrar()
 {
     var velocidad;
