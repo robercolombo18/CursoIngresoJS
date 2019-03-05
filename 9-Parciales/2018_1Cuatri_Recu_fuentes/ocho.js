@@ -8,76 +8,63 @@ function mostrar()
     var superficie;
     var respuesta;
     var cantidadPaisesImpar;
-    var cantidadPaisesMenor;
-    var cantidadPaises100;
-    var pais100superficie;
-    var cantidadSuperficies;
-    var superficieTotal;
+    var cantidadPaisesMenorCien;
+    var cantidadPaisesIgualCien;
+    var primerPaisSupero100;
 
-    cantidadPaises100=0;
-    cantidadPaisesImpar=0;
-    cantidadPaisesMenor=0;
-    cantidadSuperficies=0;
-    superficieTotal=0;
     respuesta=true;
+    cantidadPaisesImpar=0;
+    cantidadPaisesMenorCien=0;
+    cantidadPaisesIgualCien=0;
+    primerPaisSupero100=0;
+
 
     while(respuesta==true)
     {
-        pais=prompt("Ingrese el pais");
-        superficie=prompt("Ingrese la superficie");
+        pais=prompt("Ingrese el pais.");
+        
+        superficie=prompt("Ingrese la superficie.");
         superficie=parseInt(superficie);
-        cantidadSuperficies++;
-        superficieTotal=superficieTotal+superficie;
 
-        console.log("Cantidad de superficies ingresadas: " + cantidadSuperficies);
+        //------------------PUNTO 1-------------------//
 
-        respuesta=confirm("Deseas continuar?");
-
-        if(superficie%2!=0)
+        if(superficie%2 != 0)
         {
             cantidadPaisesImpar++;
-            console.log("Cantidad paises impar: " + cantidadPaisesImpar);
-    
         }
+
+        //----------------PUNTO 2--------------------//
 
         if(superficie<100)
         {
-            cantidadPaisesMenor++;
-            console.log("Cantidad paises con superficie menor a 100: " + cantidadPaisesMenor);
+            cantidadPaisesMenorCien++;
         }
+
+        //----------------PUNTO 3---------------------//
 
         if(superficie==100)
         {
-            cantidadPaises100++;
-            console.log("Cantidad paises con superficie 100: " + cantidadPaises100);
+            cantidadPaisesIgualCien++;
         }
 
-        
-        if(superficie>100)
+        //----------------PUNTO 4------------------//
+
+        if()
         {
-            pais100superficie=pais;
-            console.log("Primer pais que supero los 100: " + pais100superficie);
+            
         }
+
+        //--------------PUNTO 5-------------------//
 
         
 
 
 
+        respuesta=confirm("Deseas continuar?");
     }
 
 
-    promedio=superficieTotal/cantidadSuperficies;
-    console.log("El promedio de los km es: " + promedio);
-
-
-    //alert("Cantidad de paises con superficie impar: " + cantidadPaisesImpar + " . Cantidad de paises con superficie menor a 100: " + cantidadPaisesMenor + " . Cantidad de paises con superficie igual a 100: " + cantidadPaises100 + " . Primer pais que supero los 100 de superficie: " + pais100superficie + " . Promedio de km ingresados: " + promedio + " . Pais que menos territorio tiene: " + menorPais);
-
-
-
-
-
-
-
+    alert("Cantidad de paises con superficie impar: " + cantidadPaisesImpar + ". Cantidad de paises con superficie menor a 100: " + cantidadPaisesMenorCien + " cantidad de paises con superficie igual a 100: " + cantidadPaisesIgualCien );
     
 
 }

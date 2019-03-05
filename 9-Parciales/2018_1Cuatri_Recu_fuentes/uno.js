@@ -1,24 +1,18 @@
 
 function mostrar()
 {
-    var mascotauno
-    var mascotados
-    var pesomascotauno
-    var pesomascotados
-    var pesototal
+    var largo;
+    var ancho;
+    var perimetro;
 
-    mascotauno=prompt("Ingrese el nombre de la primer mascota.");
-    mascotados=prompt("Ingrese el nombre de la segunda mascota.");
 
-    pesomascotauno=prompt("Ingrese el peso de la primer mascota.");
-    pesomascotados=prompt("Ingrese el peso de la segunda mascota.");
+    largo=prompt("ingrese el valor del largo del rectangulo.").value;
+    largo=parseInt(largo);
 
-    pesomascotauno=parseInt(pesomascotauno);
-    pesomascotados=parseInt(pesomascotados);
-    pesototal=parseInt(pesototal);
+    amcho=prompt("ingrese el valor del ancho del rectangulo.").value;
+    ancho=parseInt(ancho);
 
-    pesototal=pesomascotauno+pesomascotados;
-
-    alert("Tenes dos mascotas " + mascotauno + " y " + mascotados + " , que pesan " + pesomascotauno + " y " + pesomascotados + " , la suma de los kilos es " + pesototal);
+    perimetro=ancho*2 + largo*2
+    alert("el perimetro del rectangulo es:" perimetro);
 
 }

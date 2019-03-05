@@ -1,39 +1,35 @@
 function mostrar()
 {
-    var numerouno;
-    var numerodos;
+    var numeroUno;
+    var numeroDos;
     var suma;
 
-    numerouno=prompt("Ingresar el primer numero");
-    numerodos=prompt("Ingresar el segundo numero");
+    numeroUno=prompt("Ingrese el primer numero.");
+    numeroUno=parseInt(numeroUno);
 
-    numerouno=parseInt(numerouno);
-    numerodos=parseInt(numerodos);
+    numeroDos=prompt("Ingrese el segundo numero.");
+    numeroDos=parseInt(numeroDos);
 
-    suma=numerouno+numerodos;
+    suma=numeroUno+numeroDos;
 
-    if(numerouno==numerodos)
+    if(numeroUno==numeroDos)
     {
-        alert(numerouno + "" + numerodos);
+        alert(numeroUno + "" + numeroDos);
     }
     else
     {
-        if(numerouno>numerodos)
+        if(numeroUno>numeroDos)
         {
-            alert(numerouno-numerodos);
+            alert(numeroUno-numeroDos);
         }
         else
         {
             alert(suma);
+        }
 
-            if(suma>10)
-            {
-                alert("La suma es " + suma + " y superó el 10.");
-            }
-            else
-            {
-                
-            }
+        if(suma>10)
+        {
+            alert("La suma es " + suma + " y superó el 10.");
         }
     }
 

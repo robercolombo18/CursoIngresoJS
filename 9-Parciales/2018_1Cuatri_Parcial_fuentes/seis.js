@@ -2,8 +2,8 @@ function mostrar()
 {
     var hora;
     var mensaje;
-    
-    hora= document.getElementById("laHora").value;
+
+    hora=document.getElementById("laHora").value;
     hora=parseInt(hora);
 
     switch(hora)
@@ -25,43 +25,35 @@ function mostrar()
         case 17:
         case 18:
         case 19:
-            mensaje="Es de tarde.";
+            mensaje="Es de tarde";
         break;
+        
+        default:
+            if(hora>=20 && hora<=24 || hora<=5 && hora >=1)
+            {
+                mensaje=("Es de noche.");
 
-        case 20:
-        case 21:
-        case 22:
-        case 23:
-        case 24:
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-            mensaje="Es de noche.";
+                if(hora>=20 && hora<=24)
+                {
+                    mensaje="A dormir."
+                }    
+    
+            }
+            else
+            {
+                mensaje="No es una hora valida.";
+
+
+            }
             
         break;
 
-        default:
-        break;
-        
+
+
     }
 
-    if(hora>24)
-    {
-        mensaje="La hora no es valida.";
-    }
-    else
-    {
-        if(hora>19&&hora<24)
-        {
-            mensaje="A dormir!";
-        }
-        else
-        {
 
-        }
-    }
+
 
     alert(mensaje);
 }
